@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>CuiMonth -- 年月选择控件</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="http://www.jiisb.com/resource/imgs/favicon.png" type="image/x-icon" />
+
+	<link rel="stylesheet" type="text/css" href="http://www.jiisb.com/resource/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jiisb.com/resource/css/www.css">
+
+	<link rel="stylesheet" type="text/css"  href="css/jquery.monthpicker.css" ></link>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.monthpicker.js?key=8"></script>
+</head>
+
+<div class="header">
+	<div class="logo"><a href="http://www.jiisb.com/"><img class="logo_img" src="http://www.jiisb.com/resource/imgs/logo.png"></a></div>
+	<a href="http://www.jiisb.com/" class="logo_text">技术帮</a>
+	
+	<div class="welcome"><i class="fa fa-heart"></i>&nbsp;
+	</div>
+</div>
+<div class="head_cl"></div>
+			<div class="btn_left_menu" onclick="clkMenu()"><i class="fa fa-bars"></i></div>
+			<div class="left  ">
+				<div class="left_menu1 w2x">
+					<ul class="menus">
+						<li class="title">CuiMonth -- 年月选取控件</li>
+						
+						
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="main">
+				<h2 class="art_title">CuiMonth -- 年月选取控件</h2>
+				
+				<div class="art_memo">本网站内容<b>基本</b>都是原创作品，未得到作者同意也<b>欢迎转载</b>。
+				<br><b>转载</b>请注明出处：<a href="http://www.jiisb.com">技术帮</a><br/> 域名：<b>http://www.jiisb.com</b> 
+				</div>
+				<div class="art_detail">
+
+				<p style="white-space: normal; text-indent: 2em;">
+    <img src="http://www.jiisb.com/upfile/20160904/1472955908895017376.png" alt="1472955908895017376.png"/><span style="font-size: 36px;"><strong>说两句</strong></span>
+</p>
+<hr style="white-space: normal;"/>
+<p style="white-space: normal; text-indent: 2em;">
+    有一次作者在项目中希望在浏览器端选择年月，在网上找了半天，发现大量的控件都是实现年月日或者年月日 时分秒的选择。
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    后来就没办法了，只能自己写一个。
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    事实上作者也并没有从头写，在网上有个<span style="color: rgb(227, 108, 9);"><strong>jquery.monthpicker.js</strong></span>，个人测试一下，感觉还有很多不足，就在其基础上做了若干优化。
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    最终效果如下：
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+	选择月份：<input type="text" id="cui_month" readonly="readonly" >
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <img src="http://www.jiisb.com/upfile/20160905/1473058358717068189.png" alt="1473058358717068189.png" style="text-indent: 32px; white-space: normal;"/>&nbsp;从GitHub获取cuimonth
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    项目部署在GitHub，下面的地址可以下载本项目。
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <a href="https://github.com/cuipy/cuimonth" _src="https://github.com/cuipy/cuimonth">https://github.com/cuipy/cuimonth</a> 
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <img src="http://www.jiisb.com/upfile/20160905/1473058816198057397.png" style="text-indent: 2em; white-space: normal;"/>&nbsp;在页面加入必要的css和js
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    本项目基于jquery，所以首先要引入jquery.js文件，同时还要加入必要的css，以实现年月选择的控件视觉效果。
+</p>
+<pre class="brush:html;toolbar:false">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/jquery.monthpicker.css&quot; &gt;&lt;/link&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.monthpicker.js?key=8&quot;&gt;&lt;/script&gt;</pre>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <img src="http://www.jiisb.com/upfile/20160905/1473060014193032310.png" style="text-indent: 2em; white-space: normal;"/>&nbsp;加入input控件用于选择年月
+</p>
+<pre class="brush:html;toolbar:false">月份：&lt;input type=&quot;text&quot; id=&quot;cui_month&quot; readonly=&quot;readonly&quot;&gt;</pre>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <img src="http://www.jiisb.com/upfile/20160905/1473090394269003381.png" style="text-indent: 32px; white-space: normal;"/>&nbsp;加入js代码将input控件cui_month改造为<strong>年月选择控件</strong>&nbsp;
+</p>
+<pre class="brush:html;toolbar:false">&lt;script type=&quot;text/javascript&quot;&gt;
+$(function() {
+  $(&#39;#cui_month&#39;).monthpicker();
+});
+&lt;/script&gt;</pre>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+<p style="white-space: normal; text-indent: 2em;">
+    <br/>
+</p>
+
+				</div>
+				<div class="box_comment">
+					
+				</div>
+			</div>
+
+<!-- 页脚 -->
+<div class="footer">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			
+			
+			
+			<div class="foot_text">
+				我只是希望新人在行进的道路上少些荆棘。
+			</div>
+			
+			<div class="foot_barcode">
+				<img src="/resource/imgs/barcode.png" />
+			</div>
+			
+			
+			<div class="foot_text">
+				Designed and built with all the love in the world by cuipengyu  
+			</div>
+			
+			<div class="foot_text">
+				若在学习中有问题，可以加群交流，技术帮群【73239800】
+				
+			</div>
+			
+			<div class="foot_text">
+				Copyright © 2016  技术帮(www.jiisb.com). All Rights Reserved.
+				冀ICP备16022291号
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+	</body>
+
+
+</html>
+
+<script type="text/javascript">
+$(function() {
+  $('#cui_month').monthpicker();
+});
+</script>

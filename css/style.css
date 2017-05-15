@@ -1,0 +1,44 @@
+
+.container{
+	margin:0px 100px;
+}
+
+
+.tbl_list{
+	width:96%;
+	margin:auto;
+	
+	border-top: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+}
+
+.tbl_list td{
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	padding:4px 12px;
+}
+
+.tbl_list thead td{
+	background-color: #e2e2e2;
+}
+
+.tbl_form {
+	border-top: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+}
+.tbl_form td{
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	padding:4px 12px;
+}
+
+.tbl_form  .td_title{
+	background-color: #e2e2e2;
+}
+
+.txt_short{
+	width:100px;
+}
+
+
+
